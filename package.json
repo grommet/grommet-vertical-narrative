@@ -1,12 +1,12 @@
 {
-  "name": "grommet-charts",
+  "name": "grommet-data-driven-narrative",
   "version": "0.0.1",
   "main": "src/index.js",
-  "description": "Grommet Charts.",
+  "description": "Grommet Data Driven Narrative Infographic.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/karatechops/grommet-charts.git"
+    "url": "https://github.com/karatechops/grommet-data-driven-narrative.git"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
