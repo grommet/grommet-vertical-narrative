@@ -1,0 +1,8 @@
+.progress {
+	position: relative;
+  left: 0;
+	height: 4px;
+	width: 0%;
+	background: nth($brand-accent-colors, 1);
+	z-index: 10;
+}

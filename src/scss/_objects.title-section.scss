@@ -1,0 +1,140 @@
+.title-section {
+	.title-section__col-1 {
+		width: 100%;
+
+		@include media-query(lap-and-up) {
+			width: 33%;
+		}
+	}
+
+	.title-section__col-2 {
+		width: 100%;
+		max-width: auto;
+
+		@include media-query(lap-and-up) {
+			width: 66%;
+			// Avoid long line lengths.
+			max-width: 740px;
+		}
+	}
+
+	&.title-section--right-align {
+		text-align: right;
+	}
+
+	&.title-section--left-align {
+		text-align: left;
+		flex-direction: column;
+		
+		@include media-query(lap-and-up) {
+			flex-direction: row;
+		}
+	}
+
+	// Preserves image on top of copy convention.
+	&.title-section--column-reverse {
+		flex-direction: column-reverse;
+
+		@include media-query(lap-and-up) {
+			flex-direction: row;
+		}
+	}
+
+	.title-section__title {
+		font-size: 1.75rem;
+		margin: 0;
+		padding: 0;
+
+		@include media-query(lap-and-up) {
+			font-size: 3.75rem;
+		}
+	}
+
+	.title-section__desc {
+		font-size: 1.3rem;
+		margin: 0;
+
+		@include media-query(lap-and-up) {
+			font-size: 1.875rem;
+			padding-bottom: 60px;
+		}
+	}
+
+	.title-section__stat,
+	.title-section__stat-desc {
+		padding: 0;
+		margin: 0;
+	}
+
+	.title-section__stat {
+		font-size: 3rem;
+		font-weight: 400;
+
+		@include media-query(lap-and-up) {
+			font-size: 8rem;
+		}
+	}
+
+	.title-section__stat--super {
+		// Browser interprets the web font too tall
+		// to place super in the right spot.
+  	position: relative;
+    vertical-align: super;
+    left: 2px;
+    font-size: 2rem;
+    top: 8px;
+
+    @include media-query(lap-and-up) {
+	    font-size: 3.5rem;
+	    top: 0;
+	  }
+	}
+
+	.title-section__stat--small {
+		font-size: 2rem;
+
+		@include media-query(lap-and-up) {
+			font-size: 5rem;
+		}
+	}
+
+	.title-section__title-img {
+		max-width: 220px;
+		padding-bottom: 30px;
+		align-self: center;
+
+		@include media-query(lap-and-up) {
+			max-width: 400px;
+			padding: 0 20px;
+		}
+	}
+
+	.title-section__stat-icon-arrow {
+		margin: 0 10px;
+		height: auto;
+		width: 25px;
+
+		@include media-query(lap-and-up) {
+			margin: 0 20px;
+			height: auto;
+			width: 40px;
+		}
+	}
+
+	.grommetux-headline {
+		max-width: 790px;
+	}
+}
+
+.grommetux-box__container.grommetux-background-color-index-graph-2,
+.grommetux-box__container.grommetux-background-color-index-graph-3 {
+	.grommetux-headline,
+	.grommetux-heading {
+		// Todo: add vars.
+		color: #231f20;
+	}
+
+	.title-section__stat-icon {
+		stroke: #231f20;
+	}
+}

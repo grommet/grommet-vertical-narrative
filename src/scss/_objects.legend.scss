@@ -1,0 +1,53 @@
+.grommetux-legend {
+	text-align: left;
+	padding-top: 10px;
+	transition: opacity 0.2s linear;
+
+	&.grommetux-legend--hidden {
+		opacity: 0;
+	}
+
+	@include media-query(lap-and-up) {
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.grommetux-legend__item-value {
+		width: auto;
+		padding-left: 10px;
+	  opacity: 0.7;
+	}
+
+	.grommetux-legend__item-label {
+		//font-weight: 600;
+		color: $text-color;
+
+		@include media-query(lap-and-up) {
+			font-size: 1.2rem;
+		}
+	}
+
+	@include media-query(lap-and-up) {
+		li:first-child { padding-left: 0; }
+
+		.grommetux-legend__item-value {
+			width: auto;
+		  opacity: 0.6;
+		}
+
+		.grommetux-legend__item {
+			padding-left: 30px;
+			display: inline-block;
+
+			.grommetux-legend__item-label {
+				min-width: auto;
+			}
+		}
+	}
+}
+
+#{$dark-background-context} {
+	.grommetux-legend .grommetux-legend__item .grommetux-legend__item-label {
+		color: $inverse-color;
+	}
+}

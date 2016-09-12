@@ -1,0 +1,45 @@
+// (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
+
+@import 'grommet/scss/hpe/hpe.defaults';
+@import 'grommet/scss/grommet-core/index';
+@import 'grommet/scss/hpe/objects.button-hpe';
+@import 'objects.charts-label';
+@import 'objects.summary';
+@import 'objects.axis';
+@import 'objects.meter';
+@import 'objects.legend';
+@import 'objects.infographic-section';
+@import 'objects.title-section';
+@import 'objects.infographic-nav';
+@import 'objects.infographic-button';
+@import 'objects.progress';
+@import 'objects.layer';
+@import 'objects.tabs';
+@import 'objects.chart-layout';
+
+// Demo specific.
+
+.grommetux-box--full {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+
+  @include media-query(lap-and-up) {
+  	text-align: center;
+	}
+}
+
+.tabs-container {
+	width: 100%;
+}
+
+.grommetux-headline {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.grommetux-heading {
+	padding: 30px 0;
+}

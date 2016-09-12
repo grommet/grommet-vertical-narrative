@@ -1,0 +1,45 @@
+.infographic__button { 
+	display: block;
+	position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 25px;
+
+  .infographic__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+
+    svg {
+    	fill: $brand-color;
+    	stroke: $brand-color;
+    	cursor: auto;
+    }
+  }
+
+  &.infographic__button--end {
+		cursor: pointer;
+    margin: 10px auto;
+
+		.infographic__button-icon {
+    	border-radius: 225px;
+    	border: 2px $brand-color solid;
+		}
+
+		svg {
+			padding: 3px;
+			padding-top: 5px;
+			cursor: pointer;
+		}
+
+		&::before {
+			display: block;
+			margin-bottom: 5px;
+			content: "Back to top";
+		}
+  }
+}

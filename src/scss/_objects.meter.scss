@@ -1,0 +1,87 @@
+@include keyframes(scale-up-horizontal) {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@include keyframes(scale-up-vertical) {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.chart-layout__bar {
+	.grommetux-heading {
+		padding: 0;
+		margin: 0;
+	}
+
+	.grommetux-meter--bar:not(.grommetux-meter--vertical) {
+		.grommetux-meter__value-container,
+		.grommetux-meter__graphic-container,
+		.grommetux-meter__graphic,
+		.grommetux-meter__values,
+		.grommetux-meter__tracks {
+			width: 100%;
+			height: auto;
+		}
+
+		.grommetux-meter__values {
+	    transform-origin: left;
+	    -webkit-animation: scale-up-vertical 0.75s ease-out;
+	    animation: scale-up-vertical 0.75s ease-out;
+		}
+	}
+
+	.grommetux-meter--bar.grommetux-meter--vertical .grommetux-meter__value,
+	.grommetux-meter--bar:not(.grommetux-meter--vertical) .grommetux-meter__value {
+		display: none;
+	}
+
+	.grommetux-meter--bar .grommetux-meter__values .grommetux-meter__slice {
+    transition: stroke-width 0.2s;
+    stroke-width: 14px;
+    // Turn these off to animate whole container, this avoids
+    // stacked segments drawn seperately.
+    -webkit-animation: none;
+    animation: none;
+
+    &.grommetux-meter__slice--active {
+    	stroke-width: 18px;
+    }
+	}
+
+	.grommetux-meter--vertical .grommetux-meter__values {
+    transform-origin: bottom;
+    -webkit-animation: scale-up-horizontal 0.75s ease-out;
+    animation: scale-up-horizontal 0.75s ease-out;
+	}
+
+	.grommetux-meter__slice {
+		stroke-width: 10px;
+	}
+
+	.grommetux-meter__tracks {
+		display: none;
+	}
+
+	.grommetux-meter--active {
+		path:not(.grommetux-meter__slice--active) {
+			opacity: 0.5;
+			stroke-width: 8px;
+		}
+	}
+}
+
+#{$dark-background-context} {
+	.grommetux-meter__labels text { fill: #fff; }
+}
+

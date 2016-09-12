@@ -1,0 +1,54 @@
+.charts-label {
+	// Remove pointer events to allow chart mouse overs.
+	pointer-events: none;
+  margin: 0;
+  padding: 5px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.4s;
+  text-align: center;
+
+  * { pointer-events: none; }
+
+  &.charts-label--vertical {
+    text-align: left;
+  }
+
+  &.charts-label--active {
+  	opacity: 1;
+
+    &.charts-label--inline {
+      opacity: 0.9;
+    }
+  }
+
+  &.charts-label--inline {
+    position: absolute;
+    top: 0;
+  }
+
+	.grommetux-heading {
+		margin: 0;
+		padding: 0;
+    pointer-events: none;
+
+		.charts-label__unit {
+			margin: 0 1px;
+      font-size: 50%;
+			font-weight: 100;
+      // Todo: add color variable.
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+#{$dark-background-context} {
+  .charts-label {
+    background: nth($brand-neutral-colors, 1);
+
+    .charts-label__unit {
+      // Todo: add color variable.
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

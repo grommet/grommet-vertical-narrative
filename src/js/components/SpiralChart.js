@@ -1,0 +1,110 @@
+import React, { Component, PropTypes } from 'react';
+
+import classnames from 'classnames';
+
+import Meter from './meter/Meter';
+import Heading from 'grommet/components/Heading';
+import Box from 'grommet/components/Box';
+
+const SERIES_VALUES = [4.6, 10.2, 22.5];
+const UNITS = 'M';
+
+export default class SpiralChart extends Component {
+  constructor(props) {
+    super(props);
+
+    this._onIndexUpdate = this._onIndexUpdate.bind(this);
+    this._onMouseLeave = this._onMouseLeave.bind(this);
+
+    this.state = {
+      chartLabel: {
+        visible: false,
+        units: null,
+        value: 0
+      },
+      activeIndex: null
+    };
+  }
+
+  _onIndexUpdate(index) {
+    const value = SERIES_VALUES[index];
+
+    if (index !== undefined && index !== null && value !== undefined) {
+      this.setState({
+        chartLabel: {
+          visible: true,
+          units: UNITS,
+          value: value
+        },
+        activeIndex: index
+      });
+    } else {
+      this.setState({
+        chartLabel: {
+          visible: false
+        },
+        activeIndex: null
+      });
+    }
+  }
+
+  _onMouseLeave() {
+    this.setState({
+      chartLabel: {
+        visible: false,
+        units: this.state.chartLabel.units,
+        value: this.state.chartLabel.value
+      }
+    });
+
+    // Wait for animation to complete before clearing index.
+    setTimeout(()=>{
+      this.setState({activeIndex: null});
+    }, 300);
+  }
+
+  render() {
+    const chartLabelRoot = 'charts-label';
+    const chartLabelClasses = classnames([
+      chartLabelRoot,
+      {
+        [`${chartLabelRoot}--active`]: this.state.chartLabel.visible
+      }
+    ]);
+
+    const chartLabel = (
+      <div className={chartLabelClasses} ref="chartLabel">
+        <Heading strong={true} tag="h2">
+          {this.state.chartLabel.value}
+          <span className={`charts-label__unit`}>
+            {this.state.chartLabel.units}
+          </span>
+        </Heading>
+      </div>
+    );
+    
+    return (
+      <div className="chart-layout chart-layout__spiral">
+        <Box direction="column" onMouseLeave={this._onMouseLeave}>
+          <Meter type="spiral" series={this.props.series} max={this.props.max}
+          onIndexUpdate={this._onIndexUpdate} important={this.state.activeIndex}
+          a11yTitleId="meter-title-17" a11yDescId="meter-desc-17" />
+          {chartLabel}
+        </Box>
+      </div>
+    );
+  }
+};
+
+SpiralChart.propTypes = {
+  series: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.number,
+      colorIndex: PropTypes.string
+    })
+  ),
+  max: PropTypes.number,
+  units: PropTypes.string
+};
+

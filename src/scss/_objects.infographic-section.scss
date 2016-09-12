@@ -1,0 +1,191 @@
+.infographic__section-header {
+	max-width: 930px;
+
+	@include media-query(lap-and-up) { margin-bottom: 40px; }
+
+	.grommetux-headline {
+		padding: 15px 0;
+		&:first-child { padding-top: 0; }
+		&:last-child { padding-bottom: 10px; }
+		&:only-child { padding: 0; }
+
+		&.grommetux-headline--large {
+			font-size: 1.95rem;
+			padding-bottom: 0;
+
+			@include media-query(lap-and-up) {
+				font-size: 3.75rem;
+				padding-bottom: 15px;
+			}
+		}
+
+		&.grommetux-headline--small {
+			font-size: 1.3rem;
+			line-height: 1.1;
+			@include media-query(lap-and-up) {
+				font-size: 1.75rem;
+			}
+		}
+	}
+}
+
+.infographic__section {
+	&.infographic__section--start {
+		position: relative;
+		// Padding for nav bar.
+		padding-top: 100px;
+
+		img {
+			margin-top: 0;
+		}
+
+		.infographic__section-header {
+			width: auto;
+			padding: 30px;
+			@media (max-width: 330px) { padding: 15px; }
+			margin: 0 24px;
+			border: 8px nth($brand-accent-colors, 1) solid;
+
+			@include media-query(lap-and-up) { width: 100%; }
+
+			.grommetux-headline {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		.grommetux-headline--large {
+			font-size: 3.5rem;
+
+			@include media-query(lap-and-up) {
+				font-size: 3.75rem;
+			}
+		}
+
+		.grommetux-headline--small {
+			padding: 30px 24px;
+			font-size: 1.6rem;
+
+			@include media-query(lap-and-up) {
+				font-size: 1.875rem;
+			}
+		}
+
+		.grommetux-footer { 
+			position: absolute;
+	    align-self: flex-end;
+	    bottom: 10px;
+	    left: 0;
+
+	    @media (max-height: 670px) {
+	    	position: relative;
+	    }
+		}
+	}
+
+	&.infographic__section--end {
+		// Padding for header.
+		@include media-query(lap-and-up) { padding-top: 100px; }
+
+		.grommetux-headline {
+			font-size: 1.5rem;
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			@include media-query(lap-and-up) {
+				font-size: 2.75rem;
+				text-align: left;
+				padding-top: 30px;
+				padding-bottom: 60px;
+			}
+		}
+
+		.grommetux-button {
+			max-width: 180px;
+		}
+
+		img {
+			max-width: 80%;
+
+			@include media-query(lap-and-up) {
+				width: 50%;
+				max-width: none;
+			}
+		}
+	}
+
+	.infographic__section-header-img {
+		width: 160px;
+
+		@include media-query(lap-and-up) {
+			width: auto;
+		}
+	}
+
+	.infographic__slide {	
+		.infographic__chart-header {
+			padding: 0 0 15px;
+
+			@include media-query(lap-and-up) {
+				padding: 30px 0;
+			}
+
+			h2.grommetux-heading {
+				padding: 0;
+				font-size: 24px;
+				margin-bottom: 5px;
+
+				@include media-query(lap-and-up) {
+					font-size: 36px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		h3.grommetux-heading {
+			padding: 10px 0;
+		}
+
+		.charts-label h3.grommetux-heading {
+			padding: 0;
+			margin: 0;
+		}
+
+		p {
+	    font-size: 0.95rem;
+    	opacity: 0.6;
+    	margin: 10px auto;
+		}
+	}
+
+	.infographic__slide--3-col {
+		justify-content: space-around;
+
+		.infographic__chart-container {
+			width: 100%;
+			min-width: 320px;
+
+			@media (min-width: 850px) {
+				justify-content: center;
+				width: 90%;
+			}
+			
+			@media (min-width: 950px) {
+				width: 70%;
+			}
+		}
+
+		img {
+			display: none;
+
+			@media (min-width: 850px) {
+				display: block;
+				width: 5%;
+			}
+			
+			@media (min-width: 950px) {
+				width: 15%;
+			}
+		}
+	}
+}
