@@ -11,9 +11,12 @@
   }
 
 	&.chart-layout--3-col {
+    flex-direction: column-reverse;
+
 		@include media-query(lap-and-up) {
-			width: 32%;
-			flex-grow: 0;
+			width: 33%;
+			flex-grow: 1;
+      flex-direction: column;
 	  }
 
 	  .charts-label {
@@ -21,35 +24,6 @@
 		  	width: 100%;
 		  }
 	  }
-
-	  .infographic-chart--active {
-	    .infographic-chart__values { opacity: 0.6; }
-	  }
-
-	  &.chart-layout--multi-area {
-	  	.chart__container {
-		  	flex-direction: row-reverse;
-		  	@include media-query(lap-and-up) { flex-direction: column; }
-		  }
-
-	  	@-moz-document url-prefix() {
-				// Fix Firefox bug. Todo: Investigate further.
-				& > div.grommetux-box:not(.summary__mobile-container) { 
-					width: 65%; 
-
-					.chart-label__container {
-						width: 85%;
-
-						@include media-query(lap-and-up) {
-				  		width: 100%;
-				  	}
-					}
-				}
-			  @include media-query(lap-and-up) {
-			  	& > div.grommetux-box { width: 100%; }
-			  }
-			}
-		}
 	}
 
 	&.chart-layout--multi-bar {
@@ -117,12 +91,14 @@
 		.grommetux-meter__tracks {
 			display: none;
 		}
-
+  
 		.grommetux-meter__slice {
 			stroke-width: 8px;
 			&.color-index-unset { stroke: rgba(255, 255, 255, 0); }
 		}
-
+    
+    // Spiral Meters do not have sizing properties so
+    // the sizing is adjusted via scss.
 		.grommetux-meter__graphic {
 			width: 100%;
 			height: auto;
@@ -148,40 +124,6 @@
 	  }
 	}
 
-  &.chart-layout__layered-area {
-  	.infographic-chart { width: 100%; }
-
-		// Todo: stepped opacity for same color layered
-		// area charts.
-  	li:first-child svg { opacity: 0.7; }
-  	li:nth-child(2) svg { opacity: 0.8; }
-  	li:nth-child(3) svg { opacity: 0.95; }
-  }
-
- 	&.chart-layout__donut {
- 		width: 50%;
-
-  	@include media-query(lap-and-up) { width: auto; }
-
-  	.grommetux-meter__value-units {
-  		display: block;
-			font-size: 50%;
-  	}
-
-  	.grommetux-meter__tracks {
-  		.grommetux-meter__slice { stroke-width: 8px; }
-  	}
-
-		.grommetux-meter__values .grommetux-meter__slice {
-			stroke-width: 9px;
-  		@include graph-stroke-color;
-
-  		&:hover {
-  			stroke-width: 11px;
-  		}
-		}
- 	}
-
   .grommetux-box {
   	flex-grow: 1;
   }
@@ -194,7 +136,8 @@
 	    transform: translateX(-50%);
   	}
   }
-
+  
+  // Make sure touch events work on mobile.
   .grommetux-meter__values g,
   .grommetux-meter__labels text {
   	cursor: pointer;

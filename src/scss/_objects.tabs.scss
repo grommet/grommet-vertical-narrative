@@ -76,36 +76,3 @@ div[role="tablist"] {
 		}
 	}
 }
-
-#{$dark-background-context} {
-	.grommetux-tabs__nav {
-		&.grommetux-tabs__nav--scrolling {
-			.grommetux-tabs {
-				color: $inverse-color;
-
-				.grommetux-tab a label {
-					border: none;
-				}
-
-				.grommetux-tab--active a label {
-					border-bottom: 2px solid;
-				}
-
-			  .grommetux-tab__label {
-					color: rgba(255, 255, 255, 0.6);
-					border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-			  }
-
-			  .grommetux-tab--active .grommetux-tab__label,
-			  .grommetux-tab--active .grommetux-tab__link:hover .grommetux-tab__label {
-			  	color: $inverse-color;
-			  	border-color: $inverse-color;
-			  }
-
-			  .grommetux-tab:hover .grommetux-tab__label {
-			    border-color: $inverse-color;
-				}
-			}
-		}
-	}
-}

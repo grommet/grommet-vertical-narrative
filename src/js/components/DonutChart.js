@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
 import Meter from 'grommet/components/Meter';
+import Value from 'grommet/components/Value';
 
 export default class DonutChart extends Component {
   constructor(props) {
@@ -19,11 +20,12 @@ export default class DonutChart extends Component {
       : 'medium';
 
     return (
-      <Box className="chart-layout chart-layout__donut" justify="center" align="center" 
+      <Box justify="center" align="center" 
         direction="column" responsive={false}>
         {title}
         <Meter value={this.props.value} type="circle" size={chartSize} 
-          colorIndex={this.props.colorIndex} units={this.props.units} />
+          colorIndex={this.props.colorIndex} 
+          label={<Value value={this.props.value} units={this.props.units} />} />
       </Box>
     );
   }

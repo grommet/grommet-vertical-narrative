@@ -37,22 +37,13 @@ export default class LargerCohert extends Component {
     if (index !== undefined) {
       switch(chart) {
         case "chart1Index":
-          this.setState({chart1Index: 
-            (this.props.layout !== "small") 
-              ? index 
-              : (VALUES_1.length  - 1) - index});
+          this.setState({ chart1Index: index });
           break;
         case "chart2Index":
-          this.setState({chart2Index: 
-            (this.props.layout !== "small") 
-              ? index 
-              : (VALUES_2.length  - 1) - index});
+          this.setState({ chart2Index: index });
           break;
         case "chart3Index":
-          this.setState({chart3Index: 
-            (this.props.layout !== "small") 
-              ? index 
-              : (VALUES_3.length  - 1) - index});
+          this.setState({ chart3Index: index });
           break;
       }
     } else {
@@ -86,16 +77,22 @@ export default class LargerCohert extends Component {
     const chart3Value = (this.state.chart3Index !== undefined)
       ? VALUES_3[this.state.chart3Index]
       : this._totalArray(VALUES_3);
-    
+
+    const dataReverse = (this.props.layout === 'small')
+      ? true
+      : false;
+
     return (
       <Box direction="row" justify="between">
-        <Box style={{flexGrow:1}}>
+        <Box className="chart-layout chart-layout--3-col">
           <Chart vertical={chartVertical} full={true}>
             <Base height="small" width="full" />
             <Layers>
-              <Marker count={15} index={this.state.chart1Index} vertical={chartVertical} />
-              <Area vertical={dataVertical} values={VALUES_1} colorIndex="accent-1"
-                activeIndex={this.state.chart1Index} max={5} min={2} />
+              <Marker count={15} index={this.state.chart1Index} vertical={chartVertical} 
+                reverse={dataReverse} />
+              <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_1}
+                colorIndex="accent-1" activeIndex={this.state.chart1Index} 
+                max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_1.length}
                 activeIndex={this.state.chart1Index}
                 onActive={this._setActiveIndex.bind(this, 'chart1Index')} />
@@ -113,13 +110,15 @@ export default class LargerCohert extends Component {
             </Heading>
           </Box>
         </Box>
-        <Box style={{flexGrow:1}}>
+        <Box className="chart-layout chart-layout--3-col">
           <Chart vertical={chartVertical} full={true}>
             <Base height="small" width="full" />
             <Layers>
-             <Marker count={15} index={this.state.chart2Index} vertical={chartVertical} />
-              <Area vertical={dataVertical} values={VALUES_2} colorIndex="accent-1" 
-                activeIndex={this.state.chart2Index} max={5} min={2} />
+             <Marker count={15} index={this.state.chart2Index} vertical={chartVertical} 
+              reverse={dataReverse} />
+              <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_2}
+                colorIndex="accent-1" activeIndex={this.state.chart2Index} 
+                max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_2.length}
                 activeIndex={this.state.chart2Index}
                 onActive={this._setActiveIndex.bind(this, 'chart2Index')} />
@@ -137,13 +136,15 @@ export default class LargerCohert extends Component {
             </Heading>
           </Box>
         </Box>
-        <Box style={{flexGrow:1}}>
+        <Box className="chart-layout chart-layout--3-col">
           <Chart vertical={chartVertical} full={true}>
             <Base height="small" width="full" />
             <Layers>
-             <Marker count={15} index={this.state.chart3Index} vertical={chartVertical} />
-              <Area vertical={dataVertical} values={VALUES_3} colorIndex="accent-1" 
-                activeIndex={this.state.chart3Index} max={5} min={2} />
+             <Marker count={15} index={this.state.chart3Index} vertical={chartVertical} 
+              reverse={dataReverse} />
+              <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_3}
+                colorIndex="accent-1" activeIndex={this.state.chart3Index} 
+                max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_3.length}
                 activeIndex={this.state.chart3Index}
                 onActive={this._setActiveIndex.bind(this, 'chart3Index')} />

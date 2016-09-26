@@ -41,7 +41,11 @@ export default class LayeredAreaChart extends Component {
   }
 
   _onIndexUpdate(index) {
-    if (index !== undefined) this.setState({ activeIndex: index });
+    const nextIndex = (this.props.layout === 'small')
+      ? (this.props.series[0].values.length - 1) - index
+      : index;
+
+    if (index !== undefined) this.setState({ activeIndex: nextIndex });
     else this.setState({ activeIndex: undefined });
   }
 
@@ -74,29 +78,25 @@ export default class LayeredAreaChart extends Component {
     const count = this.props.series[0].values.length;
 
     return (
-      <div className="chart-layout chart-layout__layered-area">
-          <Box direction="column">
-            <div className="chart__container" style={{position:'relative'}}>
-              <Box direction="row" responsive={false}>
-                <Chart vertical={false} full={true}>
-                  {this.props.axisY}
-                  <Chart vertical={true} full={true}>
-                    <Base height="small" width="full" />
-                    <Layers>
-                      <Marker vertical={!dataVertical} colorIndex="graph-1" count={count} 
-                        index={this.state.activeIndex} />
-                      {areaCharts}
-                      <HotSpots max={100} min={0} count={count} 
-                        activeIndex={this.state.activeIndex} onActive={this._onIndexUpdate} />
-                    </Layers>
-                    {this.props.axisX}
-                  </Chart>
-                </Chart>
-              </Box>
-          </div>
-          {legend}
+      <Box direction="column">
+        <Box direction="row" responsive={false}>
+          <Chart vertical={false} full={true}>
+            {this.props.axisY}
+            <Chart vertical={true} full={true}>
+              <Base height="small" width="full" />
+              <Layers>
+                <Marker vertical={!dataVertical} colorIndex="graph-1" count={count} 
+                  index={this.state.activeIndex} />
+                {areaCharts}
+                <HotSpots max={100} min={0} count={count} vertical={dataVertical}
+                  activeIndex={this.state.activeIndex} onActive={this._onIndexUpdate} />
+              </Layers>
+              {this.props.axisX}
+            </Chart>
+          </Chart>
         </Box>
-      </div>
+      {legend}
+      </Box>
     );
   }
 }

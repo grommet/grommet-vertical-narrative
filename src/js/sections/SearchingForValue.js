@@ -39,7 +39,7 @@ export default class SearchingForValue extends Component {
     ]);
 
     const axis = (this.props.layout === 'small')
-      ? <Axis vertical={false} count={5} ticks={true} 
+      ? <Axis vertical={false} count={5} ticks={true} tickAlign="end"
           labels={[
             {index: 4, label: '100%'},
             {index: 2, label: 50} ]} />
