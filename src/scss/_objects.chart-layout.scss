@@ -91,12 +91,12 @@
 		.grommetux-meter__tracks {
 			display: none;
 		}
-  
+
 		.grommetux-meter__slice {
 			stroke-width: 8px;
 			&.color-index-unset { stroke: rgba(255, 255, 255, 0); }
 		}
-    
+
     // Spiral Meters do not have sizing properties so
     // the sizing is adjusted via scss.
 		.grommetux-meter__graphic {
@@ -136,7 +136,7 @@
 	    transform: translateX(-50%);
   	}
   }
-  
+
   // Make sure touch events work on mobile.
   .grommetux-meter__values g,
   .grommetux-meter__labels text {
