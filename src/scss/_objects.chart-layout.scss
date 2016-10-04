@@ -95,6 +95,10 @@
 		.grommetux-meter__slice {
 			stroke-width: 8px;
 			&.color-index-unset { stroke: rgba(255, 255, 255, 0); }
+
+      &--active {
+        stroke-width: 12px;
+      }
 		}
 
     // Spiral Meters do not have sizing properties so

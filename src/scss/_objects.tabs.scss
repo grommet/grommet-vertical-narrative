@@ -1,78 +1,25 @@
-div[role="tabpanel"]:focus {
-	outline: none;
-	width: 100%;
+div[role=tablist] {
+  width: 100%;
 }
 
-div[role="tablist"] {
-	width: 100%;
-}
+.grommetux-tabs {
+  border-bottom: none;
+  margin-bottom: 24px;
+  color: $text-color;
 
-.grommetux-tabs__nav {
-	width: 100%;
-	overflow-x: auto;
+  .grommetux-tab__label {
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+  }
 
-	&.grommetux-tabs__nav--scrolling {
-		max-width: 90vw;
-		// Padding to accommodate scrollbar.
-		padding: 12px 0 20px;
+  .grommetux-tab--active .grommetux-tab__label,
+  .grommetux-tab--active .grommetux-tab__link:hover .grommetux-tab__label {
+    color: $text-color;
+    border-color: $brand-color;
+  }
 
-		@include media-query(lap-and-up) {
-			justify-content: center;
-			max-width: 100%;
-			padding: 0;
-		}
-
-		.grommetux-tabs {
-			width: 100%;
-			justify-content: flex-start;
-			margin: 0;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-			@include media-query(lap-and-up) {
-				justify-content: center;
-				max-width: auto;
-				margin: 0 auto;
-			}
-
-			li:first-child {
-				padding-left: 0;
-			}
-
-			.grommetux-tab a label {
-				border: none;
-			}
-
-			.grommetux-tab--active a label {
-				font-size: 1.1rem;
-				font-weight: 600;
-				border-bottom: 2px solid $brand-color;
-
-				@include media-query(lap-and-up) {
-					font-size: 1.25em;
-				}
-			}
-		}
-	}
-
-	.grommetux-tabs {
-	  border-bottom: none;
-	  margin-bottom: 24px;
-	  color: $text-color;
-
-	  .grommetux-tab__label {
-	  	color: rgba(0, 0, 0, 0.6);
-	  	padding-bottom: 2px;
-	  	border-bottom: 2px solid rgba(0, 0, 0, 0.6);
-	  }
-
-	  .grommetux-tab--active .grommetux-tab__label,
-	  .grommetux-tab--active .grommetux-tab__link:hover .grommetux-tab__label {
-	  	color: $text-color;
-	  	border-color: $brand-color;
-	  }
-
-	  .grommetux-tab:hover .grommetux-tab__label {
-	    border-color: $brand-color;
-		}
-	}
+  .grommetux-tab:hover .grommetux-tab__label {
+    border-color: $brand-color;
+  }
 }

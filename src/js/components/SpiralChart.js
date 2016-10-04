@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import classnames from 'classnames';
 
-import Meter from './meter/Meter';
+import Meter from 'grommet/components/Meter';
 import Heading from 'grommet/components/Heading';
 import Box from 'grommet/components/Box';
 
@@ -71,6 +71,9 @@ export default class SpiralChart extends Component {
         [`${chartLabelRoot}--active`]: this.state.chartLabel.visible
       }
     ]);
+    const classes = classnames([
+      { [`grommetux-meter--active`]: this.state.chartLabel.visible }
+    ]);
 
     const chartLabel = (
       <div className={chartLabelClasses} ref="chartLabel">
@@ -86,9 +89,8 @@ export default class SpiralChart extends Component {
     return (
       <div className="chart-layout chart-layout__spiral">
         <Box direction="column" onMouseLeave={this._onMouseLeave}>
-          <Meter type="spiral" series={this.props.series} max={this.props.max}
-          onIndexUpdate={this._onIndexUpdate} important={this.state.activeIndex}
-          a11yTitleId="meter-title-17" a11yDescId="meter-desc-17" />
+          <Meter className={classes} type="spiral" series={this.props.series} min={0} max={this.props.max}
+          onActive={this._onIndexUpdate} activeIndex={this.state.activeIndex} />
           {chartLabel}
         </Box>
       </div>
@@ -105,6 +107,7 @@ SpiralChart.propTypes = {
     })
   ),
   max: PropTypes.number,
+  min: PropTypes.number,
   units: PropTypes.string
 };
 

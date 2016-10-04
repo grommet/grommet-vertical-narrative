@@ -18,6 +18,7 @@ export default class SocialAndConnected extends Component {
         series={CHART_SERIES} 
         units="m"
         max={22.5}
+        min={0}
       />
     );
   }

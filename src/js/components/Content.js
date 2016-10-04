@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import scrollToTop from '../utils/scroll';
 
-import Tabs from './Tabs';
+import Tabs from 'grommet/components/Tabs';
 import Tab from 'grommet/components/Tab';
 
 import InfographicSection from './InfographicSection';
@@ -40,7 +40,7 @@ export default class Content extends Component {
 
         <InfographicSection className="infographic__section infographic__section--1" 
           colorIndex="light-1">
-          <Tabs responsive={false}>
+          <Tabs responsive={false} justify="center">
 
             <Tab title="Larger Cohort">
               <div className="infographic__slide">
@@ -86,7 +86,7 @@ export default class Content extends Component {
 
         <InfographicSection className="infographic__section infographic__section--2" 
           colorIndex="light-2">
-          <Tabs responsive={false}>
+          <Tabs responsive={false} justify="center">
 
             <Tab title="Beyond the Brand">
               <div className="infographic__slide">
@@ -122,7 +122,7 @@ export default class Content extends Component {
 
         <InfographicSection className="infographic__section infographic__section--3" 
           colorIndex="light-1">
-          <Tabs responsive={false} justify="start">
+          <Tabs responsive={false} justify="center">
             <Tab title="The Renter Generation">
               <div className="infographic__slide">
                 <ChartHeader text="A growing number of older millennials are choosing to 
