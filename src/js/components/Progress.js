@@ -11,5 +11,5 @@ export default class Progress extends Component {
 };
 
 Progress.PropTypes = {
-  setProgress: PropTypes.func
+  progress: PropTypes.Number
 };

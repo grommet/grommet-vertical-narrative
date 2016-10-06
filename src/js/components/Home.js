@@ -18,7 +18,7 @@ export default class Home extends Component {
 
     this.state = {
       layout: 'large',
-      progress: '0'
+      progress: 0
     };
   }
 
