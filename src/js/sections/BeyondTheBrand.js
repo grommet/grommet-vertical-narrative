@@ -8,7 +8,7 @@ const CHART_SERIES = [
     title: '16 - 24',
     series: [
       {
-        colorIndex: 'light-5',
+        colorIndex: 'grey-3',
         label: `Don't Know`,
         units: '%',
         value: 15
@@ -20,7 +20,7 @@ const CHART_SERIES = [
         value: 15
       }, 
       {
-        colorIndex: 'neutral-2',
+        colorIndex: 'neutral-3',
         label: 'Tend to Disagree',
         units: '%',
         value: 25
@@ -32,7 +32,7 @@ const CHART_SERIES = [
         value: 35
       }, 
       {
-        colorIndex: 'accent-1',
+        colorIndex: 'graph-1',
         label: 'Strongly Agree',
         units: '%',
         value: 10
@@ -43,7 +43,7 @@ const CHART_SERIES = [
     title: '25 - 34',
     series: [
       {
-        colorIndex: 'light-5',
+        colorIndex: 'grey-3',
         label: `Don't Know`,
         units: '%',
         value: 5
@@ -55,7 +55,7 @@ const CHART_SERIES = [
         value: 30
       }, 
       {
-        colorIndex: 'neutral-2',
+        colorIndex: 'neutral-3',
         label: 'Tend to Disagree',
         units: '%',
         value: 20
@@ -67,7 +67,7 @@ const CHART_SERIES = [
         value: 25
       }, 
       {
-        colorIndex: 'accent-1',
+        colorIndex: 'graph-1',
         label: 'Strongly Agree',
         units: '%',
         value: 20
@@ -78,7 +78,7 @@ const CHART_SERIES = [
     title: '35 - 44',
     series: [
       {
-        colorIndex: 'light-5',
+        colorIndex: 'grey-3',
         label: `Don't Know`,
         units: '%',
         value: 10
@@ -90,7 +90,7 @@ const CHART_SERIES = [
         value: 20
       }, 
       {
-        colorIndex: 'neutral-2',
+        colorIndex: 'neutral-3',
         label: 'Tend to Disagree',
         units: '%',
         value: 30
@@ -102,7 +102,7 @@ const CHART_SERIES = [
         value: 30
       }, 
       {
-        colorIndex: 'accent-1',
+        colorIndex: 'graph-1',
         label: 'Strongly Agree',
         units: '%',
         value: 10
@@ -113,7 +113,7 @@ const CHART_SERIES = [
     title: '45 - 54',
     series: [
       {
-        colorIndex: 'light-5',
+        colorIndex: 'grey-3',
         label: `Don't Know`,
         units: '%',
         value: 15
@@ -125,7 +125,7 @@ const CHART_SERIES = [
         value: 15
       }, 
       {
-        colorIndex: 'neutral-2',
+        colorIndex: 'neutral-3',
         label: 'Tend to Disagree',
         units: '%',
         value: 20
@@ -137,7 +137,7 @@ const CHART_SERIES = [
         value: 40
       }, 
       {
-        colorIndex: 'accent-1',
+        colorIndex: 'graph-1',
         label: 'Strongly Agree',
         units: '%',
         value: 10
@@ -149,7 +149,7 @@ const CHART_SERIES = [
 const LEGEND_SERIES = [
   {
     label: 'Strongly Agree',
-    colorIndex: 'accent-1',
+    colorIndex: 'graph-1',
     units: '%'
   },
   {
@@ -159,7 +159,7 @@ const LEGEND_SERIES = [
   },
   {
     label: 'Tend to Disagree',
-    colorIndex: 'neutral-2',
+    colorIndex: 'neutral-3',
     units: '%'
   },
   {
@@ -169,7 +169,7 @@ const LEGEND_SERIES = [
   },
   {
     label: 'Don\'t Know',
-    colorIndex: 'light-5',
+    colorIndex: 'grey-3',
     units: '%'
   }
 ];

@@ -8,7 +8,7 @@ export default class ChangingOwnership extends Component {
     return (
       <Box direction="row" justify="center" align="center" responsive={true}>
         <DonutChart title="2005" value={52} units="%" colorIndex="accent-3"/>
-        <DonutChart title="2012" value={60} units="%" colorIndex="accent-1"/>
+        <DonutChart title="2012" value={60} units="%" colorIndex="graph-1"/>
       </Box>
     );
   }

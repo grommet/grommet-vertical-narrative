@@ -61,7 +61,7 @@ export default class SearchingForValue extends Component {
                 value: 48
               }, 
               {
-                colorIndex: 'accent-3',
+                colorIndex: 'graph-1',
                 label: 'Non-Millennials',
                 units: '%',
                 value: 30
@@ -77,7 +77,7 @@ export default class SearchingForValue extends Component {
                 value: 43
               }, 
               {
-                colorIndex: 'accent-3',
+                colorIndex: 'graph-1',
                 label: 'Non-Millennials',
                 units: '%',
                 value: 35
@@ -92,7 +92,7 @@ export default class SearchingForValue extends Component {
           },
           {
             "label": 'Non-Millennials',
-            "colorIndex": "accent-3"
+            "colorIndex": "graph-1"
           }
         ]} units="%" />
       </Box>

@@ -17,7 +17,7 @@ export default function Title2() {
   ]);
 
   return (
-    <InfographicSection className={classes} direction="row" colorIndex="accent-2">
+    <InfographicSection className={classes} direction="row" colorIndex="neutral-2">
       <Box className={`${CLASS_ROOT}__col-1`} justify="center" align="center">
         <img className={`${CLASS_ROOT}__title-img`} src="../img/section-2/shopper.svg" />
       </Box>

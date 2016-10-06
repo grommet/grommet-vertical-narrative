@@ -6,7 +6,7 @@ const CHART_SERIES = [
  {"label": "Boomers", "value": 4.6,
   "colorIndex": "neutral-2"},
   {"label": "Gen X", "value": 10.2,
-    "colorIndex": "accent-3"},
+    "colorIndex": "graph-1"},
   {"label": "Millennials", "value": 22.5,
     "colorIndex": "accent-1"}
 ];

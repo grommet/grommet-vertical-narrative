@@ -1,13 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 const CLASS_ROOT = 'progress';
 
-export default class Progress extends Component {
-  render() {
-    return (
-      <div className={CLASS_ROOT} style={{width: `${this.props.progress}%`}}></div>
-    );
-  }
+export default function Progress (props) {
+  return (
+    <div className={CLASS_ROOT} style={{width: `${props.progress}%`}}></div>
+  );
 };
 
 Progress.PropTypes = {

@@ -45,7 +45,7 @@ export default class Home extends Component {
     return (
       <Article ref="article" className="home" onProgress={this._onProgress}
         scrollStep={false} controls={false}>
-        <Box style={{textAlign:'center', zIndex:300}}>
+        <Box style={{textAlign:'center', zIndex:1}}>
           For demonstration purposes only.
         </Box>
         <Nav progress={this.state.progress} />

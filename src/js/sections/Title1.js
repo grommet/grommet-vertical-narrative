@@ -19,7 +19,7 @@ export default function Title1 () {
   ]);
 
   return (
-    <InfographicSection className={classes} direction="row" colorIndex="accent-3">
+    <InfographicSection className={classes} direction="row" colorIndex="neutral-3">
       <Box className={`${CLASS_ROOT}__col-2`} direction="column" alignContent="start">
         <Headline className={`${CLASS_ROOT}__title`} size="large" strong={true}>Who are they?</Headline>
         <Headline className={`${CLASS_ROOT}__desc`} size="small">Millennials have different priorities and 
@@ -30,7 +30,7 @@ export default function Title1 () {
             value={1980}
             colorIndex="grey-1"
             size="large"
-            trendIcon={<LinkNext colorIndex="grey-1" style={{marginLeft:'10px'}}/>} 
+            trendIcon={<LinkNext colorIndex="light-1" style={{marginLeft:'10px'}}/>} 
           />
           <Value 
             value={1980}

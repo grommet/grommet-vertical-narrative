@@ -91,7 +91,7 @@ export default class LargerCohert extends Component {
               <Marker count={15} index={this.state.chart1Index} vertical={chartVertical} 
                 reverse={dataReverse} />
               <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_1}
-                colorIndex="accent-1" activeIndex={this.state.chart1Index} 
+                activeIndex={this.state.chart1Index} 
                 max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_1.length}
                 activeIndex={this.state.chart1Index}
@@ -117,7 +117,7 @@ export default class LargerCohert extends Component {
              <Marker count={15} index={this.state.chart2Index} vertical={chartVertical} 
               reverse={dataReverse} />
               <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_2}
-                colorIndex="accent-1" activeIndex={this.state.chart2Index} 
+                activeIndex={this.state.chart2Index} 
                 max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_2.length}
                 activeIndex={this.state.chart2Index}
@@ -143,7 +143,7 @@ export default class LargerCohert extends Component {
              <Marker count={15} index={this.state.chart3Index} vertical={chartVertical} 
               reverse={dataReverse} />
               <Area reverse={dataReverse} vertical={dataVertical} values={VALUES_3}
-                colorIndex="accent-1" activeIndex={this.state.chart3Index} 
+                activeIndex={this.state.chart3Index} 
                 max={5} min={2} />
               <HotSpots vertical={dataVertical} count={VALUES_3.length}
                 activeIndex={this.state.chart3Index}

@@ -8,24 +8,6 @@
 		&:first-child { padding-top: 0; }
 		&:last-child { padding-bottom: 10px; }
 		&:only-child { padding: 0; }
-
-		&.grommetux-headline--large {
-			font-size: 1.95rem;
-			padding-bottom: 0;
-
-			@include media-query(lap-and-up) {
-				font-size: 3.75rem;
-				padding-bottom: 15px;
-			}
-		}
-
-		&.grommetux-headline--small {
-			font-size: 1.3rem;
-			line-height: 1.1;
-			@include media-query(lap-and-up) {
-				font-size: 1.75rem;
-			}
-		}
 	}
 }
 

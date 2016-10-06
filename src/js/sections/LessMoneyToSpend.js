@@ -33,7 +33,7 @@ export default class LessMoneyToSpend extends Component {
             values: [69, 69, 68, 67, 66, 65, 66, 66, 
               66, 64, 64, 63, 64],
             units: "%",
-            colorIndex: "accent-1"
+            colorIndex: "graph-1"
           }]}
       />
     );

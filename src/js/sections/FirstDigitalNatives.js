@@ -54,7 +54,6 @@ export default class FirstDigitalNatives extends Component {
                   value: 48
                 }, 
                 {
-                  colorIndex: 'accent-3',
                   label: 'Gen X',
                   units: '%',
                   value: 30
@@ -79,7 +78,6 @@ export default class FirstDigitalNatives extends Component {
                   value: 43
                 }, 
                 {
-                  colorIndex: 'accent-3',
                   label: 'Gen X',
                   units: '%',
                   value: 35
@@ -104,7 +102,6 @@ export default class FirstDigitalNatives extends Component {
                   value: 55
                 }, 
                 {
-                  colorIndex: 'accent-3',
                   label: 'Gen X',
                   units: '%',
                   value: 45
@@ -129,7 +126,7 @@ export default class FirstDigitalNatives extends Component {
           },
           {
             "label": 'Gen X',
-            "colorIndex": "accent-3"
+            "colorIndex": "graph-1"
           },
           {
             "label": 'Baby Boomers',
