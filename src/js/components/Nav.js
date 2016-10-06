@@ -39,7 +39,7 @@ export default class Nav extends Component {
       CLASS_ROOT,
       {
         [`${CLASS_ROOT}--active`]: 
-          this.props.progress >= 95 || this.props.progress <= 0
+          this.props.progress >= 95
       }
     );
 
