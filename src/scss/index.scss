@@ -40,3 +40,8 @@
 .grommetux-heading {
 	padding: 30px 0;
 }
+
+// Correct CaaS header's z-index
+.header {
+  position: relative;
+}
