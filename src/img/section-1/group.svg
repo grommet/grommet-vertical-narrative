@@ -4,21 +4,21 @@
 	 viewBox="0 0 400.7 414.7" style="enable-background:new 0 0 400.7 414.7;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#211F1F;stroke-width:3;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#67506C;stroke-width:4.5;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#56C5D0;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#501eb4;stroke-width:4.5;stroke-miterlimit:10;opacity:0.8;}
+	.st2{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 	.st3{clip-path:url(#XMLID_2_);fill:none;stroke:#211F1F;stroke-width:3;stroke-miterlimit:10;}
 	.st4{clip-path:url(#XMLID_3_);}
 	.st5{fill:none;stroke:#211F1F;stroke-width:4.5;stroke-miterlimit:10;}
 	.st6{fill:none;stroke:#00B48D;stroke-width:3;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#FD9A69;stroke-width:6;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#00CCEB;stroke-width:6;stroke-miterlimit:10;}
 	.st8{fill:none;stroke:#FFFFFF;stroke-width:4.5;stroke-miterlimit:10;}
-	.st9{fill:#FD9A69;stroke:#211F1F;stroke-width:3;stroke-miterlimit:10;}
-	.st10{fill:#FD9A69;}
+	.st9{fill:#00CCEB;stroke:#211F1F;stroke-width:3;stroke-miterlimit:10;}
+	.st10{fill:#00CCEB;}
 	.st11{clip-path:url(#XMLID_4_);fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 	.st12{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 	.st13{fill:none;stroke:#231F20;stroke-width:3;stroke-miterlimit:10;}
 	.st14{fill:none;stroke:#231F20;stroke-width:4.5;stroke-miterlimit:10;}
-	.st15{clip-path:url(#XMLID_5_);fill:#FD9A69;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st15{clip-path:url(#XMLID_5_);fill:#00CCEB;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 	.st16{clip-path:url(#XMLID_6_);fill:none;stroke:#231F20;stroke-width:3;stroke-miterlimit:10;}
 	.st17{fill:none;stroke:#F0F0F0;stroke-width:3;stroke-miterlimit:10;}
 </style>

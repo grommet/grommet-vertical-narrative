@@ -59,7 +59,7 @@ export const FIRST_DIGITAL_NATIVES = {
           value: 48
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Gen X',
           units: '%',
           value: 30
@@ -83,7 +83,7 @@ export const FIRST_DIGITAL_NATIVES = {
           value: 48
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Gen X',
           units: '%',
           value: 30
@@ -107,7 +107,7 @@ export const FIRST_DIGITAL_NATIVES = {
           value: 48
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Gen X',
           units: '%',
           value: 30
@@ -130,7 +130,7 @@ export const FIRST_DIGITAL_NATIVES = {
       },
       {
         "label": 'Gen X',
-        "colorIndex": "accent-3"
+        "colorIndex": "accent-2"
       },
       {
         "label": 'Baby Boomers',
@@ -146,7 +146,7 @@ export const SOCIAL_AND_CONNECTED = {
    {"label": "Boomers", "value": 4.6,
     "colorIndex": "neutral-2"},
     {"label": "Gen X", "value": 10.2,
-      "colorIndex": "accent-3"},
+      "colorIndex": "accent-2"},
     {"label": "Millennials", "value": 22.5,
       "colorIndex": "accent-1"}
   ],
@@ -203,13 +203,13 @@ export const BEYOND_THE_BRAND = {
       title: '16 - 24',
       series: [
         {
-          colorIndex: 'light-5',
+          colorIndex: 'grey-1',
           label: `Don't Know`,
           units: '%',
           value: 15
         }, 
         {
-          colorIndex: 'accent-2',
+          colorIndex: 'grey-4',
           label: 'Strongly Disagree',
           units: '%',
           value: 15
@@ -221,7 +221,7 @@ export const BEYOND_THE_BRAND = {
           value: 25
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Tend to Agree',
           units: '%',
           value: 35
@@ -238,13 +238,13 @@ export const BEYOND_THE_BRAND = {
       title: '25 - 34',
       series: [
         {
-          colorIndex: 'light-5',
+          colorIndex: 'grey-1',
           label: `Don't Know`,
           units: '%',
           value: 5
         }, 
         {
-          colorIndex: 'accent-2',
+          colorIndex: 'grey-4',
           label: 'Strongly Disagree',
           units: '%',
           value: 30
@@ -256,7 +256,7 @@ export const BEYOND_THE_BRAND = {
           value: 20
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Tend to Agree',
           units: '%',
           value: 25
@@ -273,13 +273,13 @@ export const BEYOND_THE_BRAND = {
       title: '35 - 44',
       series: [
         {
-          colorIndex: 'light-5',
+          colorIndex: 'grey-1',
           label: `Don't Know`,
           units: '%',
           value: 10
         }, 
         {
-          colorIndex: 'accent-2',
+          colorIndex: 'grey-4',
           label: 'Strongly Disagree',
           units: '%',
           value: 20
@@ -291,7 +291,7 @@ export const BEYOND_THE_BRAND = {
           value: 30
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Tend to Agree',
           units: '%',
           value: 30
@@ -308,13 +308,13 @@ export const BEYOND_THE_BRAND = {
       title: '45 - 54',
       series: [
         {
-          colorIndex: 'light-5',
+          colorIndex: 'grey-1',
           label: `Don't Know`,
           units: '%',
           value: 15
         }, 
         {
-          colorIndex: 'accent-2',
+          colorIndex: 'grey-4',
           label: 'Strongly Disagree',
           units: '%',
           value: 15
@@ -326,7 +326,7 @@ export const BEYOND_THE_BRAND = {
           value: 20
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Tend to Agree',
           units: '%',
           value: 40
@@ -348,7 +348,7 @@ export const BEYOND_THE_BRAND = {
     },
     {
       label: 'Tend to Agree',
-      colorIndex: 'accent-3',
+      colorIndex: 'accent-2',
       units: '%'
     },
     {
@@ -358,12 +358,12 @@ export const BEYOND_THE_BRAND = {
     },
     {
       label: 'Strongly Disagree',
-      colorIndex: 'accent-2',
+      colorIndex: 'grey-4',
       units: '%'
     },
     {
       label: 'Don\'t Know',
-      colorIndex: 'light-5',
+      colorIndex: 'grey-1',
       units: '%'
     }
   ]
@@ -430,7 +430,7 @@ export const SEARCHING_FOR_VALUE = {
           value: 48
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Non-Millennials',
           units: '%',
           value: 30
@@ -447,7 +447,7 @@ export const SEARCHING_FOR_VALUE = {
           value: 43
         }, 
         {
-          colorIndex: 'accent-3',
+          colorIndex: 'accent-2',
           label: 'Non-Millennials',
           units: '%',
           value: 35
@@ -463,7 +463,7 @@ export const SEARCHING_FOR_VALUE = {
       },
       {
         "label": 'Non-Millennials',
-        "colorIndex": "accent-3"
+        "colorIndex": "accent-2"
       }
     ],
     units: '%'
@@ -475,7 +475,7 @@ export const RENTER_GENERATION = {
    {"label": "Boomers", "value": 4.6,
     "colorIndex": "neutral-2"},
   {"label": "Gen X", "value": 10.2,
-    "colorIndex": "accent-3"},
+    "colorIndex": "accent-2"},
   {"label": "Millennials", "value": 22.5,
     "colorIndex": "accent-1"}
   ],
@@ -489,7 +489,7 @@ export const CHANGING_OWNERSHIP = {
       title: '2005',
       value: 52,
       units: "%",
-      colorIndex: "accent-3"
+      colorIndex: "accent-2"
     },
     {
       title: '2012',

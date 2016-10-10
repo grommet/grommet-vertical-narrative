@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import HPELogo from './HPELogo.js';
 import classnames from 'classnames';
 import Anchor from 'grommet/components/Anchor';
 import Layer from 'grommet/components/Layer';
@@ -8,6 +7,8 @@ import Header from 'grommet/components/Header';
 import Headline from 'grommet/components/Headline';
 import Share from 'grommet/components/icons/base/Share';
 import SocialShare from 'grommet/components/SocialShare';
+import GrommetLogo from 
+  'grommet/components/icons/base/BrandGrommetOutline';
 
 import Progress from './Progress';
 
@@ -39,7 +40,7 @@ export default class Nav extends Component {
       CLASS_ROOT,
       {
         [`${CLASS_ROOT}--active`]: 
-          this.props.progress >= 95
+          this.props.progress >= 95 || this.props.progress <= 0
       }
     );
 
@@ -85,7 +86,7 @@ export default class Nav extends Component {
         {layer}
         <Box full="horizontal" direction="row" align="center" justify="between"
           responsive={false} colorIndex="light-1" pad="medium">
-          <HPELogo />
+          <GrommetLogo size="large" colorIndex="brand" />
           {navCta}
         </Box>
         <Progress progress={this.props.progress}/>
