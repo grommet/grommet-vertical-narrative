@@ -209,7 +209,7 @@ export const BEYOND_THE_BRAND = {
           value: 15
         }, 
         {
-          colorIndex: 'grey-4',
+          colorIndex: 'grey-2',
           label: 'Strongly Disagree',
           units: '%',
           value: 15
@@ -244,7 +244,7 @@ export const BEYOND_THE_BRAND = {
           value: 5
         }, 
         {
-          colorIndex: 'grey-4',
+          colorIndex: 'grey-2',
           label: 'Strongly Disagree',
           units: '%',
           value: 30
@@ -279,7 +279,7 @@ export const BEYOND_THE_BRAND = {
           value: 10
         }, 
         {
-          colorIndex: 'grey-4',
+          colorIndex: 'grey-2',
           label: 'Strongly Disagree',
           units: '%',
           value: 20
@@ -314,7 +314,7 @@ export const BEYOND_THE_BRAND = {
           value: 15
         }, 
         {
-          colorIndex: 'grey-4',
+          colorIndex: 'grey-2',
           label: 'Strongly Disagree',
           units: '%',
           value: 15
@@ -358,7 +358,7 @@ export const BEYOND_THE_BRAND = {
     },
     {
       label: 'Strongly Disagree',
-      colorIndex: 'grey-4',
+      colorIndex: 'grey-2',
       units: '%'
     },
     {

@@ -21,7 +21,6 @@ export default class SearchingForValue extends Component {
   }
 
   _onIndexUpdate(index) {
-    console.log(index);
     this.setState({ activeIndex: index });
   }
 
