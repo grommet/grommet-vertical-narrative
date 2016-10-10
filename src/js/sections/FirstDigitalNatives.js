@@ -13,7 +13,7 @@ export default class FirstDigitalNatives extends Component {
     this._onIndexUpdate = this._onIndexUpdate.bind(this);
 
     this.state = {
-      activeIndex: undefined
+      activeIndex: null
     };
   }
 
@@ -24,7 +24,7 @@ export default class FirstDigitalNatives extends Component {
   render() {
     const legendClasses = classnames([
       {
-        [`grommetux-legend--hidden`] : this.state.activeIndex !== undefined
+        [`grommetux-legend--hidden`] : this.state.activeIndex !== null
       }
     ]);
 
