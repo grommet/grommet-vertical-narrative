@@ -24,7 +24,6 @@
     "morgan": "^1.5.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-router": "^2.3.0",
     "throng": "^4.0.0"
   },
   "devDependencies": {

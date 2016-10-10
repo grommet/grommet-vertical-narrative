@@ -9,9 +9,10 @@ if (! Modernizr.flexbox ||
     'If you are using the latest Internet Explorer, you will need to turn off Compatibility Mode.');
 }
 
-import routes from './js/routes';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './js/App';
 
 const element = document.getElementById('content');
-ReactDOM.render(routes, element);
+ReactDOM.render(<App />, element);
 document.body.classList.remove('loading');

@@ -2,39 +2,27 @@ import React, { Component } from 'react';
 
 import { Axis } from 'grommet/components/chart/Chart';
 import LineChart from '../components/LineChart';
+import { LESS_MONEY_TO_SPEND } from '../constants';
 
 export default class LessMoneyToSpend extends Component {
   render() {
+    const axisSmall = LESS_MONEY_TO_SPEND.axis.small;
+    const axisLarge = LESS_MONEY_TO_SPEND.axis.large;
+    const { series, title, max, min } = LESS_MONEY_TO_SPEND;
     const axis = (this.props.layout === 'small')
-      ? <Axis vertical={true} ticks={true} count={13} labels={[
-        {"index": 0, "label": "2000", "flip": true},
-        {"index": 6, "label": "2006"},
-        {"index": 12, "label": "2012"}
-      ]} />
-      : <Axis vertical={false} ticks={true} count={13} labels={[
-        {"index": 0, "label": "2000", "flip": true},
-        {"index": 2, "label": "2002"},
-        {"index": 4, "label": "2004"},
-        {"index": 6, "label": "2006"},
-        {"index": 8, "label": "2008"},
-        {"index": 10, "label": "2010"},
-        {"index": 12, "label": "2012"}
-      ]} />;
-
+      ? <Axis vertical={true} ticks={true} count={axisSmall.count}
+        labels={axisSmall.series} />
+      : <Axis vertical={false} ticks={true} count={axisLarge.count}
+        labels={axisLarge.series} />;
+        
     return (
       <LineChart 
         axis={axis} 
         layout={this.props.layout}
-        min={62}
-        max={69}
-        title="Less Money to Spend"
-        series={[
-          {
-            values: [69, 69, 68, 67, 66, 65, 66, 66, 
-              66, 64, 64, 63, 64],
-            units: "%",
-            colorIndex: "accent-1"
-          }]}
+        min={min}
+        max={max}
+        title={title}
+        series={series}
       />
     );
   }

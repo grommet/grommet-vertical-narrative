@@ -41,14 +41,3 @@
 		}
 	}
 }
-
-#{$dark-background-context} {
-  .charts-label {
-    background: nth($brand-neutral-colors, 1);
-
-    .charts-label__unit {
-      // Todo: add color variable.
-      color: rgba(255, 255, 255, 0.5);
-    }
-  }
-}

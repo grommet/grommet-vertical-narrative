@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-
 import Box from 'grommet/components/Box';
 import DonutChart from '../components/DonutChart';
+import { CHANGING_OWNERSHIP } from '../constants';
 
 export default class ChangingOwnership extends Component {
   render() {
+    const charts = CHANGING_OWNERSHIP.charts.map((chart, index) => 
+      <DonutChart key={`donut-chart-${index}`} title={chart.title} 
+        value={chart.value} units={chart.units} colorIndex={chart.colorIndex} />
+    );
+
     return (
       <Box direction="row" justify="center" align="center" responsive={true}>
-        <DonutChart title="2005" value={52} units="%" colorIndex="accent-3"/>
-        <DonutChart title="2012" value={60} units="%" colorIndex="accent-1"/>
+        {charts}
       </Box>
     );
   }

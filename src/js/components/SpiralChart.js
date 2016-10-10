@@ -1,13 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-
 import classnames from 'classnames';
-
 import Meter from 'grommet/components/Meter';
 import Heading from 'grommet/components/Heading';
 import Box from 'grommet/components/Box';
-
-const SERIES_VALUES = [4.6, 10.2, 22.5];
-const UNITS = 'M';
 
 export default class SpiralChart extends Component {
   constructor(props) {
@@ -27,14 +22,12 @@ export default class SpiralChart extends Component {
   }
 
   _onIndexUpdate(index) {
-    const value = SERIES_VALUES[index];
-
-    if (index !== undefined && index !== null && value !== undefined) {
+    if (index !== undefined && index !== null) {
       this.setState({
         chartLabel: {
           visible: true,
-          units: UNITS,
-          value: value
+          units: this.props.units,
+          value: this.props.series[index].value
         },
         activeIndex: index
       });
@@ -52,7 +45,7 @@ export default class SpiralChart extends Component {
     this.setState({
       chartLabel: {
         visible: false,
-        units: this.state.chartLabel.units,
+        units: this.state.chartLabel.units || null,
         value: this.state.chartLabel.value
       }
     });
@@ -89,8 +82,9 @@ export default class SpiralChart extends Component {
     return (
       <div className="chart-layout chart-layout__spiral">
         <Box direction="column" onMouseLeave={this._onMouseLeave}>
-          <Meter className={classes} type="spiral" series={this.props.series} min={0} max={this.props.max}
-          onActive={this._onIndexUpdate} activeIndex={this.state.activeIndex} />
+          <Meter className={classes} type="spiral" series={this.props.series} 
+            min={0} max={this.props.max} onActive={this._onIndexUpdate} 
+            activeIndex={this.state.activeIndex} />
           {chartLabel}
         </Box>
       </div>
