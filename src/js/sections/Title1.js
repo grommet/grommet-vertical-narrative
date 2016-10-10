@@ -30,7 +30,7 @@ export default function Title1 () {
             value={1980}
             colorIndex="grey-1"
             size="large"
-            trendIcon={<LinkNext colorIndex="grey-1" style={{marginLeft:'10px'}}/>} 
+            trendIcon={<LinkNext  style={{marginLeft:'10px'}}/>} 
           />
           <Value 
             value={1980}
