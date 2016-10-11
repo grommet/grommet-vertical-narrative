@@ -28,6 +28,7 @@ node_modules
 
 
 **bower_components**
+src/**
 .DS_Store
 .sass-cache
 *.iml
