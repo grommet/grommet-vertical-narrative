@@ -7,12 +7,13 @@ import Heading from 'grommet/components/Heading';
 import Box from 'grommet/components/Box';
 import Value from 'grommet/components/Value';
 import LinkNext from 'grommet/components/icons/base/LinkNext';
+import UserFemale from 'grommet/components/icons/base/UserFemale';
 import InfographicSection from '../components/InfographicSection';
 
 const CLASS_ROOT = "title-section";
 
 export default function Title1 () {
-  let classes = classnames([
+  const classes = classnames([
     CLASS_ROOT,
     `${CLASS_ROOT}--left-align`,
     `${CLASS_ROOT}--column-reverse`
@@ -39,8 +40,9 @@ export default function Title1 () {
           />
         </Box>
       </Box>
-      <Box className={`${CLASS_ROOT}__col-1`} justify="center">
-        <img className={`${CLASS_ROOT}__title-img`} src="../img/section-1/group.svg" />
+      <Box pad={{vertical: "medium", between: "medium"}} direction="column" 
+         className={`${CLASS_ROOT}__col-1`}justify="center">
+        <UserFemale size="huge" colorIndex="grey-1" />
       </Box>
     </InfographicSection>
   );

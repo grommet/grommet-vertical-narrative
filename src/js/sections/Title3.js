@@ -7,6 +7,7 @@ import Heading from 'grommet/components/Heading';
 import Value from 'grommet/components/Value';
 import Box from 'grommet/components/Box';
 import InfographicSection from '../components/InfographicSection';
+import Home from 'grommet/components/icons/base/Home';
 
 const CLASS_ROOT = "title-section";
 
@@ -34,8 +35,8 @@ export default function Title3() {
         </Box>
         <Heading className={`${CLASS_ROOT}__stat-desc`} tag="h4" strong={true}>in expected Sharing Economy revenues by 2025</Heading>
       </Box>
-      <Box className={`${CLASS_ROOT}__col-1`} justify="center">
-        <img className={`${CLASS_ROOT}__title-img`} src="../img/section-3/landscape.svg" />
+      <Box className={`${CLASS_ROOT}__col-1`} pad={{vertical:"medium"}}>
+        <Home size="huge" colorIndex="light-1" />
       </Box>
     </InfographicSection>
   );
