@@ -7,6 +7,7 @@ import Heading from 'grommet/components/Heading';
 import Value from 'grommet/components/Value';
 import Box from 'grommet/components/Box';
 import InfographicSection from '../components/InfographicSection';
+import Cart from 'grommet/components/icons/base/Cart';
 
 const CLASS_ROOT = "title-section";
 
@@ -18,8 +19,8 @@ export default function Title2() {
 
   return (
     <InfographicSection className={classes} direction="row" colorIndex="accent-2">
-      <Box className={`${CLASS_ROOT}__col-1`} justify="center" align="center">
-        <img className={`${CLASS_ROOT}__title-img`} src="../img/section-2/shopper.svg" />
+      <Box className={`${CLASS_ROOT}__col-1`} pad={{vertical: "medium"}}>
+        <Cart size="huge" colorIndex="grey-1" />
       </Box>
       <Box className={`${CLASS_ROOT}__col-2`} direction="column" alignContent="start">
         <Headline className={`${CLASS_ROOT}__title`} size="large" strong={true}>Brands and Retail</Headline>
