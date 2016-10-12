@@ -7,8 +7,8 @@ import Header from 'grommet/components/Header';
 import Headline from 'grommet/components/Headline';
 import Share from 'grommet/components/icons/base/Share';
 import SocialShare from 'grommet/components/SocialShare';
-import GrommetLogo from 
-  'grommet/components/icons/base/BrandGrommetOutline';
+import BrandLogo from 
+  'grommet/components/icons/base/PlatformHpi';
 
 import Progress from './Progress';
 
@@ -86,7 +86,7 @@ export default class Nav extends Component {
         {layer}
         <Box full="horizontal" direction="row" align="center" justify="between"
           responsive={false} colorIndex="light-1" pad="medium">
-          <GrommetLogo size="large" colorIndex="brand" />
+          <BrandLogo size="large" colorIndex="brand" />
           {navCta}
         </Box>
         <Progress progress={this.props.progress}/>

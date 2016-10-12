@@ -42,7 +42,7 @@ export default function Title1 () {
       </Box>
       <Box pad={{vertical: "medium", between: "medium"}} direction="column" 
          className={`${CLASS_ROOT}__col-1`}justify="center">
-        <UserFemale size="huge" colorIndex="grey-1" />
+        <UserFemale size="huge" colorIndex="light-1" />
       </Box>
     </InfographicSection>
   );
