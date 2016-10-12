@@ -5,7 +5,7 @@ import StartButton from '../components/StartButton';
 import Headline from 'grommet/components/Headline';
 import Box from 'grommet/components/Box';
 import Footer from 'grommet/components/Footer';
-import UserFemale from 'grommet/components/icons/base/UserFemale';
+import UserPolice from 'grommet/components/icons/base/UserPolice';
 import UserManager from 'grommet/components/icons/base/UserManager';
 import UserWorker from 'grommet/components/icons/base/UserWorker';
 
@@ -20,7 +20,7 @@ export default function Intro () {
         must reinvent how they do business.</Headline>
       <Box direction="row" full="horizontal" justify="center" align="center">
         <UserManager size="xlarge" colorIndex="neutral-2" />
-        <UserFemale size="xlarge" colorIndex="neutral-1" />
+        <UserPolice size="xlarge" colorIndex="neutral-1" />
         <UserWorker size="xlarge" colorIndex="neutral-2" />
       </Box>
       <Footer justify="center" align="center">
