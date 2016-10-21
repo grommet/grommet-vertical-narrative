@@ -18,7 +18,8 @@ export default function Intro () {
       </div> 
       <Headline size="small">As Millennials move into prime spending years, companies 
         must reinvent how they do business.</Headline>
-      <Box direction="row" full="horizontal" justify="center" align="center">
+      <Box direction="row" full="horizontal" justify="center" align="center"
+        pad={{vertical: "medium"}} responsive={false}>
         <UserManager size="xlarge" colorIndex="neutral-2" />
         <UserPolice size="xlarge" colorIndex="neutral-1" />
         <UserWorker size="xlarge" colorIndex="neutral-2" />
