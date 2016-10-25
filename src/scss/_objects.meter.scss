@@ -21,8 +21,7 @@
 .chart-layout__bar {
 	.grommetux-meter--bar:not(.grommetux-meter--vertical) {
 		// Constrain meter height to reduce gap between data bars.
-		.grommetux-meter__graphic 
-    {
+		.grommetux-meter__graphic {
 			width: 100%;
 			max-height: 65px;
       overflow: hidden;
