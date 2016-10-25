@@ -1,160 +1,165 @@
 .chart-layout {
-	display: flex;
-	flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
 
   .chart__container {
-  	position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
   }
 
-	&.chart-layout--3-col {
+  &.chart-layout--3-col {
     flex-direction: column-reverse;
 
-		@include media-query(lap-and-up) {
-			width: 33%;
-			flex-grow: 1;
+    @include media-query(lap-and-up) {
+      width: 33%;
+      flex-grow: 1;
       flex-direction: column;
-	  }
+    }
 
-	  .charts-label {
-	  	@include media-query(lap-and-up) {
-		  	width: 100%;
-		  }
-	  }
-	}
+    .charts-label {
+      @include media-query(lap-and-up) {
+        width: 100%;
+      }
+    }
+  }
 
-	&.chart-layout--multi-bar {
-		.axis {
-			align-self: flex-start;
-		}
+  &.chart-layout--multi-bar {
+    .axis {
+      align-self: flex-start;
+    }
 
-		.chart-layout__bar {
-			width: 100%;
+    .chart-layout__bar {
+      width: 100%;
 
-			@include media-query(lap-and-up) {
-		    flex-grow: 0;
-		    width: auto;
-		    padding: 0 10px;
-			}
-		}
+      @include media-query(lap-and-up) {
+        flex-grow: 0;
+        width: auto;
+        padding: 0 10px;
+      }
+    }
 
-		.charts-label {
-			@include media-query(lap-and-up) {
-				min-width: 105px;
-			}
-		}
+    .charts-label {
+      @include media-query(lap-and-up) {
+        min-width: 105px;
+      }
+    }
 
-		.chart-layout__bar--small {
-			flex-direction: row;
+    .chart-layout__bar--small {
+      flex-direction: row;
 
-			.charts-label {
-				padding: 0;
-				width: 25%;
-			}
-		}
+      .charts-label {
+        padding: 0;
+        width: 25%;
+      }
+    }
 
-		.chart-layout__bar--stacked {
-			width: 100%;
-			@include media-query(lap-and-up) {
-				max-width: 140px;
+    .chart-layout__bar--stacked {
+      width: 100%;
+      @include media-query(lap-and-up) {
+        max-width: 140px;
 
-				.charts-label {
-					min-width: 125px;
-				}
-			}
-		}
+        .charts-label {
+          min-width: 125px;
+        }
+      }
+    }
 
-		.grommetux-legend {
-			align-self: flex-start;
-			transition: opacity 0.25s linear;
+    .grommetux-legend {
+      align-self: flex-start;
+      transition: opacity 0.25s linear;
 
-			@include media-query(lap-and-up) {
-				align-self: center;
-			}
-		}
+      @include media-query(lap-and-up) {
+        align-self: center;
+      }
+    }
 
-		&.chart-demo-bar-multi--active {
-			.grommetux-legend { opacity: 0; }
-		}
-	}
+    &.chart-demo-bar-multi--active {
+      .grommetux-legend { opacity: 0; }
+    }
+  }
 
-	&.chart-layout__bar {
-		width: 100%;
-	}
+  &.chart-layout__bar {
+    width: 100%;
 
-	&.chart-layout__spiral {
-		.grommetux-meter__value { display: none; }
+    .grommetux-meter--bar,
+    .grommetux-meter__graphic-container { 
+      width: 100%; 
+    }
+  }
 
-		.grommetux-meter__tracks {
-			display: none;
-		}
+  &.chart-layout__spiral {
+    .grommetux-meter__value { display: none; }
 
-		.grommetux-meter__slice {
-			stroke-width: 8px;
-			&.color-index-unset { stroke: rgba(255, 255, 255, 0); }
+    .grommetux-meter__tracks {
+      display: none;
+    }
+
+    .grommetux-meter__slice {
+      stroke-width: 8px;
+      &.color-index-unset { stroke: rgba(255, 255, 255, 0); }
 
       &--active {
         stroke-width: 12px;
       }
-		}
+    }
 
     // Spiral Meters do not have sizing properties so
     // the sizing is adjusted via scss.
-		.grommetux-meter__graphic {
-			width: 100%;
-			height: auto;
-			max-width: 275px;
-		}
+    .grommetux-meter__graphic {
+      width: 100%;
+      height: auto;
+      max-width: 275px;
+    }
 
-		.grommetux-meter__value-container,
-		.grommetux-meter__graphic-container {
-			width: 100%;
-			max-height: 275px;
-		}
+    .grommetux-meter__value-container,
+    .grommetux-meter__graphic-container {
+      width: 100%;
+      max-height: 275px;
+    }
 
-		.grommetux-meter--active {
-			path:not(.grommetux-meter__slice--active),
-			text:not(.grommetux-meter__label--active) {
-				opacity: 0.5;
-			}
-		}
+    .grommetux-meter--active {
+      path:not(.grommetux-meter__slice--active),
+      text:not(.grommetux-meter__label--active) {
+        opacity: 0.5;
+      }
+    }
 
-		.grommetux-meter__values .grommetux-meter__slice {
-	    transition: stroke-width 0.2s;
-	    @include animation('draw-arc 1.5s ease-out');
-	  }
-	}
+    .grommetux-meter__values .grommetux-meter__slice {
+      transition: stroke-width 0.2s;
+      @include animation('draw-arc 1.5s ease-out');
+    }
+  }
 
   .grommetux-box {
-  	flex-grow: 1;
+    flex-grow: 1;
   }
 
   .infographics-legend {
-  	left: 0;
+    left: 0;
 
-  	@include media-query(lap-and-up) {
-	    left: 50%;
-	    transform: translateX(-50%);
-  	}
+    @include media-query(lap-and-up) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   // Make sure touch events work on mobile.
   .grommetux-meter__values g,
   .grommetux-meter__labels text {
-  	cursor: pointer;
+    cursor: pointer;
   }
 
   .summary__mobile-container {
-  	width: 25%;
-  	min-width: 25%;
+    width: 25%;
+    min-width: 25%;
   }
 
   .charts-label {
-  	@include media-query(lap-and-up) {
-	  	width: 100%;
-	  }
+    @include media-query(lap-and-up) {
+      width: 100%;
+    }
   }
 }
