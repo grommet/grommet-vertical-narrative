@@ -101,6 +101,7 @@ export default class BarChart extends Component {
           value={item.value}
           colorIndex={item.colorIndex}
           onActive={this._onIndexUpdate.bind(this, index)}
+          size={(this.props.layout === 'small') ? "xlarge" : "small"}
         />
       ) : (
       <Meter id={`meter-1`} key={`meter-1`}
@@ -111,6 +112,7 @@ export default class BarChart extends Component {
         series={this.props.series}
         stacked={true}
         onActive={this._onIndexUpdate.bind(this)}
+        size={(this.props.layout === 'small') ? "xlarge" : "small"}
       />
     );
 
@@ -149,18 +151,13 @@ export default class BarChart extends Component {
             {chartLabel}
           </Box>
         </Box>
-      ) 
-      : (
-        <Box direction="column">
+      ) : (
+        <Box direction="column" full="horizontal">
           {horizontalAxis}
-          <Box className="chart-layout__bar--small" responsive={false} direction="row" align="center" justify="center">
-            <Box direction="column">
-              <Chart vertical={true}>
-                <Base>
-                  <Box direction="column">{meters}</Box>
-                </Base>
-              </Chart>
-
+          <Box className="chart-layout__bar--small" responsive={false} direction="row" 
+            align="center" justify="center">
+            <Box direction="column" style={{maxWidth: '75%'}}>
+              <Box direction="column">{meters}</Box>
               <Heading strong={true} tag="h5">
                 {this.props.title}
               </Heading>
