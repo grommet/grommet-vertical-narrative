@@ -19,19 +19,13 @@
 }
 
 .chart-layout__bar {
-	.grommetux-heading {
-		padding: 0;
-		margin: 0;
-	}
-
 	.grommetux-meter--bar:not(.grommetux-meter--vertical) {
-		.grommetux-meter__value-container,
-		.grommetux-meter__graphic-container,
-		.grommetux-meter__graphic,
-		.grommetux-meter__values,
-		.grommetux-meter__tracks {
+		// Constrain meter height to reduce gap between data bars.
+		.grommetux-meter__graphic 
+    {
 			width: 100%;
-			height: auto;
+			max-height: 65px;
+      overflow: hidden;
 		}
 
 		.grommetux-meter__values {
