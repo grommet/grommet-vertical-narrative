@@ -80,19 +80,19 @@ export const FIRST_DIGITAL_NATIVES = {
           colorIndex: 'accent-1',
           label: 'Millennials',
           units: '%',
-          value: 48
+          value: 43
         }, 
         {
           colorIndex: 'accent-3',
           label: 'Gen X',
           units: '%',
-          value: 30
+          value: 35
         }, 
         {
           colorIndex: 'neutral-2',
           label: 'Baby Boomers',
           units: '%',
-          value: 25
+          value: 30
         }
       ],
       max: 75
@@ -104,19 +104,19 @@ export const FIRST_DIGITAL_NATIVES = {
           colorIndex: 'accent-1',
           label: 'Millennials',
           units: '%',
-          value: 48
+          value: 55
         }, 
         {
           colorIndex: 'accent-3',
           label: 'Gen X',
           units: '%',
-          value: 30
+          value: 45
         }, 
         {
           colorIndex: 'neutral-2',
           label: 'Baby Boomers',
           units: '%',
-          value: 25
+          value: 40
         }
       ],
       max: 75
@@ -175,7 +175,7 @@ export const LESS_MONEY_TO_SPEND = {
         {"index": 3, "label": "2006"},
         {"index": 5, "label": "2012"}
       ],
-      count: 13
+      count: 6
     }
   },
   max: 69,
