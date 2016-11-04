@@ -21,10 +21,15 @@ export default function Title1 () {
   return (
     <InfographicSection className={classes} direction="row" colorIndex="accent-3">
       <Box className={`${CLASS_ROOT}__col-2`} direction="column" alignContent="start">
-        <Headline className={`${CLASS_ROOT}__title`} size="large" strong={true}>Who are they?</Headline>
-        <Headline className={`${CLASS_ROOT}__desc`} size="small">Millennials have different priorities and 
-          expectations than previous generations.</Headline>
-        <Heading className={`${CLASS_ROOT}__stat-desc`} tag="h4" strong={true}>Born between</Heading>
+        <Headline className={`${CLASS_ROOT}__title`} size="large" strong={true}>
+          Who are they?
+        </Headline>
+        <Headline className={`${CLASS_ROOT}__desc`} size="small">
+          Millennials have different priorities and expectations than previous generations.
+        </Headline>
+        <Heading className={`${CLASS_ROOT}__stat-desc`} tag="h4" strong={true}>
+          Born between
+        </Heading>
         <Box direction="row" responsive={false} align="center" wrap={true}>
           <Value 
             value={1980}
@@ -40,7 +45,8 @@ export default function Title1 () {
         </Box>
       </Box>
       <Box className={`${CLASS_ROOT}__col-1`} justify="center">
-        <img className={`${CLASS_ROOT}__title-img`} src="../img/section-1/group.svg" />
+        <img className={`${CLASS_ROOT}__title-img`} style={{maxWidth:'400px'}}
+          src="../img/section-1/group.svg" />
       </Box>
     </InfographicSection>
   );

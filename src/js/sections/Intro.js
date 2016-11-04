@@ -15,7 +15,8 @@ export default function Intro () {
       </div> 
       <Headline size="small">As Millennials move into prime spending years, companies 
         must reinvent how they do business.</Headline>
-      <Image full="horizontal" src="../img/start/intro-full.svg" />
+      <Image style={{maxWidth: '1232px'}} full="horizontal" 
+        src="../img/start/intro-full.svg" />
       <Footer justify="center" align="center">
         <StartButton text="scroll down to continue"/>
       </Footer>

@@ -11,8 +11,10 @@ export default function End(props) {
     <InfographicSection className="infographic__section infographic__section--end" 
       colorIndex="light-2">
       <Box direction="row" justify="center" align="center">
+        <Box basis="1/3">
         <img src="../img/end/millennials.svg" />
-        <Box>
+        </Box>
+        <Box basis="2/3">
           <Headline size="large">These are just some of the trends that
             will shape the new Millennial economy.</Headline>
           <Button href="http://www.hpe.com/solutions/enable" label="Learn more" 
