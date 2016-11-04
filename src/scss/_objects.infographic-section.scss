@@ -105,12 +105,8 @@
 		}
 
 		img {
-			max-width: 80%;
-
-			@include media-query(lap-and-up) {
-				width: 50%;
-				max-width: none;
-			}
+			width: 100%;
+			max-width: 400px;
 		}
 	}
 
