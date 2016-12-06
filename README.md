@@ -1,4 +1,4 @@
-# Grommet Data Driven Narrative Infographic
+# Grommet Vertical Narrative Infographic
 
 This is the source code for a Grommet based universal single page. To run the website execute the following:
 
