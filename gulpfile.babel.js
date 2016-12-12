@@ -3,7 +3,6 @@
 import yargs from 'yargs';
 const argv = yargs.argv;
 import gulp from 'gulp';
-import fs from 'fs';
 import grommetToolbox, {getOptions} from 'grommet-toolbox';
 
 const options = getOptions();
